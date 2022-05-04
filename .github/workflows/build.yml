@@ -3,7 +3,7 @@ name: Node CI
 on: [push]
 
 jobs:
-  build_and_test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
