@@ -29,5 +29,6 @@ jobs:
           tag: auto
           removeArtifacts: true
           allowUpdates: true
+          name: "Auto Release - On Push"
       
       
