@@ -26,6 +26,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/index.js"
-          tag: ${{ github.commit_sha }}
+          tag: auto
       
       
