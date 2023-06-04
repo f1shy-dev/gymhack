@@ -5,15 +5,26 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: build stuffs
+      - name: Build scripts
         run: |
           yarn install
           yarn build
-      - name: Archive production artifacts
+      
+      - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-output
           path: dist/index.js
+
+      - name: Create release
+        id: create_release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dist/index.js"
+      
+      
