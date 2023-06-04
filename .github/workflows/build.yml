@@ -27,5 +27,7 @@ jobs:
         with:
           artifacts: "dist/index.js"
           tag: auto
+          removeArtifacts: true
+          allowUpdates: true
       
       
