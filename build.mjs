@@ -8,8 +8,8 @@ await esbuild
     outfile: "dist/index.js",
     plugins: [minifyTemplates(), writeFiles()], // <--
     bundle: true,
-    minify: true,
-    minifyWhitespace: true,
+    minify: !watch,
+    minifyWhitespace: !watch,
     write: false, // <-- important!
     watch: {
       onRebuild(error, result) {

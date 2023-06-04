@@ -1,5 +1,9 @@
 export const boxingHack = (g, hidden) => {
   const card = document.querySelector(".hack.card.main_card");
+  while (!Game) {
+    console.log("Game object not detected, trying again...");
+    return;
+  }
   const bags = Game.BoxingBagTagTextGroup;
   if (bags.length === 0)
     return (card.innerHTML = "No answer detected (start boxing game)");

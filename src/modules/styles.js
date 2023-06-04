@@ -43,4 +43,17 @@ export const loadStyles = () =>
 .main_card {
 	height: 200%;
 	padding: 8px 12px;
-}`);
+}
+
+.main_card.teleport {
+  position: fixed;
+  height: auto;
+  width: auto;
+}
+
+.main_card:not(.teleport) {
+  position: sticky;
+  top: 0 !important;
+  left: 0 !important;
+}
+`);

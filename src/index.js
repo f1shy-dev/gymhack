@@ -7,10 +7,11 @@ import { $ } from "./modules/dom";
   if (hackName && config[hackName]) return init(config[hackName]);
 
   const breadcrumb = $("ul.breadcrumb.ff-rockwell > li:last-child");
-  if (!breadcrumb) return alert("Could not detect hack to use");
+  if (!breadcrumb) return console.log("Could not detect hack to use");
 
   if (breadcrumb.innerText == "Workout") return init(config.workout);
   if (breadcrumb.innerText == "Boxing") return init(config.boxing);
+  if (breadcrumb.innerText == "Verb Trainer") return init(config.verbTrainer);
 
-  alert("Could not detect hack to use");
+  console.log("Could not detect hack to use");
 })();
